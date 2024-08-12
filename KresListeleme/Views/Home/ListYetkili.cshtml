@@ -1,0 +1,39 @@
+﻿@model List<Yetki>
+
+@{
+    ViewData["Title"] = "Yetkililer";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Yetki ID</th>
+            <th>Yetki Türü</th>
+            <th>Yetkili Ad</th>
+            <th>Yetkili İletişim</th>
+            <th>Yetkili Adres</th>
+            <th>Yetkili E-Mail</th>
+            <th>Yetkili Şifre</th>
+            <th>Aktif</th>
+            <th>Kres ID</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var yetki in Model)
+        {
+            <tr>
+                <td>@yetki.YetkiId</td>
+                <td>@yetki.YetkiTuru</td>
+                <td>@yetki.YetkiliAd</td>
+                <td>@yetki.YetkiliIletisim</td>
+                <td>@yetki.YetkiliAdres</td>
+                <td>@yetki.YetkiliEMail</td>
+                <td>@yetki.YetkiliSifre</td>
+                <td>@yetki.Aktif</td>
+                <td>@yetki.KresId</td>
+            </tr>
+        }
+    </tbody>
+</table>
